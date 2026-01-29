@@ -1,0 +1,213 @@
+/* ================= BODY ================= */
+body {
+    background: radial-gradient(circle at top, #1b1a17, #0e0d0b);
+    color: #d6c9a8;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* ================= CONTAINER ================= */
+#game-container {
+    width: 100%;
+    max-width: 700px;
+    background: #12100e;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.9);
+    border: 1px solid #2a2622;
+    overflow: hidden;
+}
+
+/* ================= HEADER ================= */
+#header {
+    background: #1a1714;
+    padding: 16px;
+    border-bottom: 1px solid #2a2622;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #d6c9a8;
+}
+
+#player-stats {
+    line-height: 1.7;
+    color: #bfb08a;
+    font-size: 0.95rem;
+}
+
+#energy-timer {
+    color: #6b7f5a;
+    font-weight: 600;
+}
+
+/* ================= MAIN SCREEN ================= */
+#main-screen {
+    padding: 20px;
+    min-height: 340px;
+}
+
+#location-name {
+    margin-top: 0;
+    color: #e3dbc4;
+}
+
+/* ================= STORY ================= */
+#story-box {
+    background: #181512;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    border-left: 3px solid #6b7f5a;
+}
+
+#story-text {
+    color: #e3dbc4;
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
+/* ================= ACTION BUTTONS ================= */
+#action-buttons {
+    margin-top: 10px;
+}
+
+#action-buttons button {
+    background: #2a2622;
+    color: #d6c9a8;
+    border: 1px solid #3b2f23;
+    padding: 10px 16px;
+    margin: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#action-buttons button:hover {
+    background: #6b7f5a;
+    color: #0e0d0b;
+}
+
+/* ================= NPC BUTTON ================= */
+#npc-buttons button {
+    background: #1f241d !important;
+    border: 1px solid #3b2f23 !important;
+    color: #d6c9a8 !important;
+    margin: 4px;
+}
+
+#npc-buttons button:hover {
+    background: #6b7f5a !important;
+    color: #0e0d0b !important;
+}
+
+/* ================= FOOTER ================= */
+#footer {
+    padding: 16px;
+    background: #141210;
+    font-size: 0.85rem;
+    color: #9c9070;
+}
+
+/* ================= INVENTORY ================= */
+#inventory-display {
+    background: #181512;
+    padding: 10px;
+    border: 1px solid #2a2622;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+/* ================= INPUT AREA ================= */
+#input-area {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
+#cmdInput {
+    flex: 1;
+    background: #1a1714;
+    border: 1px solid #3b2f23;
+    color: #e3dbc4;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    min-height: 0px;
+    max-height: 20px;
+    resize: vertical;
+}
+
+#input-area button {
+    background: #6b7f5a;
+    color: #0e0d0b;
+    border: none;
+    border-radius: 10px;
+    padding: 0 22px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    min-height: 20px;
+}
+
+#input-area button:hover {
+    background: #8fa27a;
+}
+
+#input-area button:active {
+    transform: scale(0.96);
+}
+
+#input-area button:focus {
+    outline: none;
+}
+
+/* ================= HINT ================= */
+#hint {
+    margin-top: 8px;
+    color: #8c8264;
+}
+
+/* ================= NOTIFICATION ================= */
+#notification-area {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.notif {
+    background: #6b7f5a;
+    color: #0e0d0b;
+    padding: 12px 24px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    animation: popupNotif 3s ease forwards;
+}
+
+@keyframes popupNotif {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+    }
+}

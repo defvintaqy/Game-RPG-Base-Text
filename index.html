@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunto Wijaya: Penakluk 10 Desa</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div id="game-container">
+
+    <div id="header">
+        <div id="player-stats"></div>
+        <div id="energy-timer"></div>
+    </div>
+
+    <div id="notification-area"></div>
+
+    <div id="main-screen">
+        <h3 id="location-name"></h3>
+
+        <div id="story-box">
+            <p id="story-text"></p>
+        </div>
+
+        <div id="npc-list" style="display:none; margin-bottom: 10px;">
+            <small>Interaksi 10 Warga untuk membuka jalan ke BOSS:</small>
+            <br><br>
+            <div id="npc-buttons"></div>
+        </div>
+
+        <div id="action-buttons"></div>
+    </div>
+
+    <div id="footer">
+        <div id="inventory-display"></div>
+
+        <div id="input-area">
+            <input type="text" id="cmdInput" placeholder="Ketik perintah... (contoh: .jual Akar Alang)">
+            <button onclick="prosesCommand()">Kirim</button>
+        </div>
+
+        <div id="hint">
+            <b>.jual [nama]</b> | <b>.makan [nama]</b> | <b>.beli [nama]</b>
+        </div>
+    </div>
+
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
